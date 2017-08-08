@@ -9,6 +9,8 @@
         - Express.js
         - Body-parser
         - Path
+        - Materialize
+        - jQuery
 
 ## Using Friend-Finder
 - Currently under construction. Check back soon.
