@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!--jQuery CDN (ALWAYS before Mat CDN) -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
     <!-- Minified Materialize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 
@@ -14,14 +19,167 @@
     <!--Materialize Icons  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!--jQuery CDN  -->
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    
     <title>Friend-Finder Survey</title>
 </head>
 <body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="surveyTitle center">Survey Questions</h1>
+
+            <hr>
+
+            <br>
+
+            <div class="button center">
+                <a href="/"><button class="btn waves-effect waves-light red">I'd Rather Not Risk Our Friendship</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <form class="col s12 m12 l12">
+                <h3>About You</h3>
+                    <label for="nameEntry"><h5>Name<h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <input placeholder="Please Enter Your Name" id="nameEntry" type="text" class="validate">
+                    </div>
+
+                    <label for="photoLink"><h5>Photo Upload</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <input placeholder="Please Enter a Valid Photo Link" id="photoLink" type="text">
+                    </div>
+
+                    <label for="questionOne"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionOne">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                    <label for="questionTwo"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionTwo">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                    <label for="questionThree"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionThree">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                    <label for="questionFour"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionFour">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                    <label for="questionFive"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionFive">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                    <label for="questionSix"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionSix">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                    <label for="questionSeven"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionSeven">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                    <label for="questionEight"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionEight">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                    <label for="questionNine"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionNine">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                    <label for="questionTen"><h5>This is a Test Question for Later Update</h5></label>
+                    <div class="input-field col s12 m12 l12">
+                        <select id="questionTen">
+                            <option value="" disabled selected>Choose your Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Neutral)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+            </form>
+        </div>
+    </div>
     
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+
 </body>
 </html>
