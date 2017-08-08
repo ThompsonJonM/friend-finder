@@ -1,2 +1,14 @@
-# friend-finder
-A full-stack site using express.js to build a mock dating application.
+# Friend-Finder
+
+## What is Friend-Finder?
+- Friend-finder is a mock dating site using node.js to create a full-stack web application.
+
+## Setup
+- Run npm install
+    + This will install the following node.js applications:
+        - Express.js
+        - Body-parser
+        - Path
+
+## Using Friend-Finder
+- Currently under construction. Check back soon.

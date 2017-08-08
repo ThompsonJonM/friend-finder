@@ -1,0 +1,25 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "A full-stack site using express.js to build a mock dating application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThompsonJonM/friend-finder.git"
+  },
+  "keywords": [],
+  "author": "Jonathan Thompson",
+  "license": "NU Bootcamp",
+  "bugs": {
+    "url": "https://github.com/ThompsonJonM/friend-finder/issues"
+  },
+  "homepage": "https://github.com/ThompsonJonM/friend-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  }
+}
