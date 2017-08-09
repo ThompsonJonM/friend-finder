@@ -23,6 +23,10 @@ app.get('/survey', function(req, res) {
     res.sendFile(path.join(__dirname + "/public/survey.html"));
 });
 
+app.get('/data', function(req, res) {
+    res.sendFile(path.join(__dirname + "/data/friends.js"));
+});
+
 app.listen(PORT, function() {
     console.log('Listening on port: ' + PORT);
 });
