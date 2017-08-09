@@ -13,19 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// Home Route
-app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + "/public/home.html"));
-});
+app.use(express.static('app'));
 
-// Survey Route
-app.get('/survey', function(req, res) {
-    res.sendFile(path.join(__dirname + "/public/survey.html"));
-});
-
-app.get('/data', function(req, res) {
-    res.sendFile(path.join(__dirname + "/data/friends.js"));
-});
+require('./routing/apiRoutes.js')(app);
+require('./routing/htmlRoutes.js')(app);
 
 app.listen(PORT, function() {
     console.log('Listening on port: ' + PORT);
