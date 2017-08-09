@@ -187,7 +187,7 @@
 
         <div class="row">
             <div class="button left">
-                <button class="btn waves-effect waves-light blue" type="submit" name="action">
+                <button class="btn waves-effect waves-light blue" id="submit" type="submit" name="action">
                     <i class="material-icons left">send</i>Submit
                 </button>
             </div>
@@ -195,9 +195,20 @@
     </div>
     
     <script type="text/javascript">
+
+        // Initialize Materialize select function on document ready
         $(document).ready(function() {
             $('select').material_select();
         });
+
+        // On Click for Submit
+        $('#submit').on('click', function(event) {
+            event.preventDefault();
+
+            var submitName = $('#nameEntry').val().trim();
+            var submitPhoto = $('#photoLink').val().trim();
+        });
+
     </script>
 
 </body>
