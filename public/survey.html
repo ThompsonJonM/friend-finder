@@ -41,7 +41,7 @@
 
     <div class="container">
         <div class="row">
-            <form class="col s12 m12 l12">
+            <form class="col s12 m12 l12" method="POST" action="/api/friends">
                     <label for="nameEntry"><h5>Name<h5></label>
                     <div class="input-field col s12 m12 l12">
                         <input placeholder="Please Enter Your Name" id="nameEntry" type="text" class="validate">
@@ -51,15 +51,7 @@
                     <div class="input-field col s12 m12 l12">
                         <input placeholder="Please Enter a Valid Photo Link" id="photoLink" type="text">
                     </div>
-            </form>
-        </div>
-    </div>
 
-    <br>
-
-    <div class="container">
-        <div class="row">
-            <form class="col s12 m12 l12">
                     <label for="questionOne"><h5>1. This is a Test Question for Later Update</h5></label>
                     <div class="input-field col s12 m12 l12">
                         <select id="questionOne">
@@ -193,12 +185,30 @@
             </div>
         </div>
     </div>
-    
+
+    <div id="bestMatchResults" class="modal bottom-sheet">
+        <div class="modal-header"> 
+            <h2>Best Match</h2>
+        </div>
+
+        <div class="modal-content">
+            <h2 id="bestMatchName"></h2>
+            <img id="bestMatchPhoto" src="" alt>
+        </div>
+    </div>
+
     <script type="text/javascript">
 
         // Initialize Materialize select function on document ready
         $(document).ready(function() {
             $('select').material_select();
+        });
+
+        // Initialize Materialize modal on doc ready
+        $(document).ready(function() {
+            $('.modal').modal({
+                dismissable: true
+            });
         });
 
         // On Click for Submit
@@ -208,7 +218,8 @@
             var friendInput = {
                 name: $('#nameEntry').val().trim(),
                 photo: $('#photoLink').val().trim(),
-                scores: [$('#questionOne').val().trim(),
+                scores: [
+                    $('#questionOne').val().trim(),
                     $('#questionTwo').val().trim(), 
                     $('#questionThree').val().trim(), 
                     $('#questionFour').val().trim(), 
@@ -217,8 +228,19 @@
                     $('#questionSeven').val().trim(), 
                     $('#questionEight').val().trim(), 
                     $('#questionNine').val().trim(), 
-                    $('#questionTen').val().trim()]
+                    $('#questionTen').val().trim()
+                ]
             }
+
+            var currentURL = window.location.origin;
+
+            $.post(currentURL + '/api/friends', friendInput, function(data) {
+                $('#bestMatchName').text(data.name);
+                $('#bestmatchPhoto').text(data.photo);
+                $('#bestMatchResults').modal('toggle');
+            });
+
+            return false;
         });
 
     </script>
