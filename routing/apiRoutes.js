@@ -36,7 +36,7 @@ module.exports = function(app) {
                 totalDifference += differenceInScore;
             }
 
-            differencesArray = totalDifference;
+            differencesArray[i] = totalDifference;
         }
 
         var bestMatchNumber = differencesArray[0];
