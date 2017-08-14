@@ -13,4 +13,7 @@
         - jQuery
 
 ## Using Friend-Finder
-- Currently under construction. Check back soon.
+- Type node server to initialize the server
+- Connect to localhost:3000
+- Follow the links on the page to fill out the survey
+- Date your friends!
