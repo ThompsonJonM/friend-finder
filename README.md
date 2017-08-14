@@ -14,6 +14,6 @@
 
 ## Using Friend-Finder
 - Type node server to initialize the server
-- Connect to localhost:3000
-- Follow the links on the page to fill out the survey
-- Date your friends!
+    + Connect to localhost:3000
+    + Follow the links on the page to fill out the survey
+    + Date your friends!
